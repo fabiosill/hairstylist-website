@@ -1,0 +1,122 @@
+/*Zerar margem*/
+body{
+    margin:0; 
+    font-family: Arial, Helvetica, sans-serif;  
+
+}
+/*Cor do cabeçalho*/
+header{
+    background: 
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)),
+    url('../img/kleberquimica.jpg') center/cover no-repeat;
+}
+/*Tamanho do logo, posicionamento*/
+.logo{
+    margin-left: 20%;
+    width: 8%;
+    padding: 10px 0 20px 5%;
+}
+/*Cor do menu, posição, tamanho da fonte, tipo de fonte*/
+nav{
+    color: rgb(209, 192, 37);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+/*escrita em fileira, longe de 30px da margem*/
+nav li{
+    display: inline;
+    margin-right: 30px;
+}
+.divHeader{
+    position: relative;
+}
+
+/*Estilização de títulos*/
+.titulos {
+    text-align: center;
+    color: rgb(247, 247, 247);
+}
+.titulos2 {      
+    float: center;
+    margin-right: 10%;
+    color: rgb(255, 255, 255); 
+    font-size:large;
+}    
+.sobrenos{
+    width: 60%;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 20%;
+}
+.imgsobrenos{
+    
+    width: 18%;
+    float: left;
+    margin-right: 2%;
+    border-radius: 5%;
+}
+/*Estilização da sessão NOSSO ESTABELECIMENTO*/
+.mapa{
+    text-align: center;
+}
+.titulosmap {
+    text-align: center;
+    color: rgb(0, 0, 0);  
+}
+/*imagem do div*/
+.imglogo{
+    width: 10%;
+    float: right;
+    margin-right: 35%;
+    border-radius: 5%;
+    box-shadow: 10px 10px 15px 0px black;
+    opacity: 1;
+    transition: 400ms;
+}
+.imglogo:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.titulosprod {
+    text-align: left;
+    margin-left: 35%;
+    font-size: 18;
+    color: rgb(0, 0, 0);
+}
+
+/*Sessao vídeo*/
+.video{
+    text-align: center;
+    background-color: linear;
+}
+footer{
+    padding: 30px 10px 10px 0px;
+    background: url("../img/kleberbanner.png");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgb(31, 29, 29);
+}
+footer p{
+    padding-left: 40%;
+    color: aliceblue;
+    text-align: left;
+    font-size: 18px;
+    text-decoration: none;
+}
+footer a{
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+}
+.logo_footer{
+    width:15%;
+    padding-left: 42.5%;
+}
+
+nav a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
