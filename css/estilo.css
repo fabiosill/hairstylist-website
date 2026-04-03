@@ -4,25 +4,65 @@ body{
     font-family: Arial, Helvetica, sans-serif;  
 
 }
+a {
+    text-decoration: none;
+    color: #ebde69;
+}
 /*Cor do cabeçalho*/
 header{
     background: 
     linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)),
     url('../img/kleberquimica.jpg') center/cover no-repeat;
 }
+.p-vip{
+    font-family: "Cookie", cursive;
+    font-style: normal;
+    text-align: center;
+    color: #ebde69;
+    margin-bottom: 5vh;
+    font-size: 100px;
+}
+.p-vip1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    text-align: center;
+    color: #f1edc7;
+    margin-top: -3vh;
+    font-size: 30px;
+}
+.p-vip2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    text-align: center;
+    color: #fff069;
+    margin-top: -3vh;
+    font-size: 30px;
+}
+.header-btn{
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #d6c846;
+}
+.div-vip{
+    padding-bottom: 30vh;
+    justify-content: center;
+    text-align: center;
+
+}
 /*Tamanho do logo, posicionamento*/
 .logo{
-    margin-left: 20%;
+    margin-left: 14vh;
     width: 8%;
     padding: 10px 0 20px 5%;
 }
 /*Cor do menu, posição, tamanho da fonte, tipo de fonte*/
 nav{
-    color: rgb(209, 192, 37);
+    color: #ebde69;
     position: absolute;
     top: 20%;
-    right: 20%;
-    font-size: 15px;
+    right: 10%;
+    font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 /*escrita em fileira, longe de 30px da margem*/
@@ -37,12 +77,12 @@ nav li{
 /*Estilização de títulos*/
 .titulos {
     text-align: center;
-    color: rgb(247, 247, 247);
+    color: rgb(0, 0, 0);
 }
 .titulos2 {      
     float: center;
     margin-right: 10%;
-    color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
     font-size:large;
 }    
 .sobrenos{
@@ -120,3 +160,4 @@ nav a:hover{
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+
