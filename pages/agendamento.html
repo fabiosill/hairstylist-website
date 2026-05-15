@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento | Kleber Pinto</title>
+    <link rel="icon" href="../img/kleberlogo.png" type="image/png">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="divHeader">
+            <img src="../img/kleberlogo.png" class="logo" alt="Kleber Pinto">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="produtos.html">PRODUTOS</a></li>
+                    <li><a href="unidade.html">UNIDADE</a></li>
+                    <li><a href="trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
+                    <li><a href="a-barbearia.html">A BARBEARIA</a></li>
+                    <li class="active"><a href="agendamento.html">AGENDAMENTO</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page-banner">
+            <h1>Agendamento</h1>
+            <p>Reserve seu horário com facilidade</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INTRO -->
+        <section style="background:var(--black);padding:60px 5% 0;text-align:center;" class="fade-in">
+            <p class="section-title">Agende seu Horário</p>
+            <p class="section-subtitle">Preencha o formulário ou entre em contato pelo WhatsApp</p>
+            <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:60px;">
+                <a href="https://wa.me/5511999000000?text=Olá! Gostaria de agendar um horário." target="_blank"
+                    style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:#25d366;color:#fff;font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;transition:opacity .3s;"
+                    onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+                    <i class="fa fa-whatsapp" style="font-size:20px;"></i> Agendar pelo WhatsApp
+                </a>
+                <a href="https://instagram.com/kleber.pinto.hair" target="_blank"
+                    style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366);color:#fff;font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;transition:opacity .3s;"
+                    onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+                    <i class="fa fa-instagram" style="font-size:20px;"></i> Mensagem no Instagram
+                </a>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="form-section fade-in">
+            <div class="form-container">
+                <p class="section-title" style="font-size:clamp(28px,4vw,46px);">Formulário de Agendamento</p>
+                <p style="text-align:center;color:#a09880;font-size:14px;margin-bottom:40px;">Entraremos em contato para confirmar seu horário.</p>
+
+                <div class="form-group">
+                    <label>Nome completo *</label>
+                    <input type="text" id="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Telefone / WhatsApp *</label>
+                        <input type="tel" id="telefone" placeholder="(11) 9 0000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Serviço desejado *</label>
+                    <select id="servico" required>
+                        <option value="" disabled selected>Selecione um serviço</option>
+                        <option>Corte de Cabelo</option>
+                        <option>Barba</option>
+                        <option>Corte + Barba</option>
+                        <option>Coloração / Química</option>
+                        <option>Hidratação</option>
+                        <option>Sobrancelha</option>
+                        <option>Pacote VIP (Corte + Barba + Hidratação)</option>
+                        <option>Outro — descrever nas observações</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Data preferida *</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Horário preferido *</label>
+                        <select id="horario" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>13:30</option>
+                            <option>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                            <option>15:30</option>
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                            <option>17:30</option>
+                            <option>18:00</option>
+                            <option>18:30</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Observações</label>
+                    <textarea id="obs" placeholder="Alguma preferência, referência de corte ou informação adicional..."></textarea>
+                </div>
+
+                <div style="background:var(--grey-dark);border:1px solid var(--grey-mid);border-radius:2px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:#a09880;display:flex;gap:12px;align-items:flex-start;">
+                    <span style="color:var(--gold);font-size:18px;">ℹ️</span>
+                    <span>
+                        <strong style="color:var(--white);">Horário de funcionamento:</strong>
+                        Terça a Sexta: 09h–19h &nbsp;|&nbsp; Sábado: 09h–17h<br>
+                        Agendamentos estão sujeitos à confirmação. Entraremos em contato pelo WhatsApp ou e-mail informado.
+                    </span>
+                </div>
+
+                <button class="btn-gold" onclick="enviarAgendamento()">
+                    <i class="fa fa-calendar-check-o"></i> &nbsp;Solicitar Agendamento
+                </button>
+
+                <div class="alert-success" id="alertaSucesso">
+                    ✅ &nbsp;Solicitação enviada com sucesso! Entraremos em contato em breve para confirmar seu horário.
+                </div>
+            </div>
+        </section>
+
+        <!-- HORÁRIOS E LOCALIZAÇÃO RÁPIDA -->
+        <section style="background:var(--black);padding:80px 5%;text-align:center;" class="fade-in">
+            <p class="section-title">Encontre-nos</p>
+            <p class="section-subtitle">Estamos te esperando</p>
+            <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:800px;margin:0 auto;">
+                <div style="text-align:center;">
+                    <span style="font-size:36px;display:block;margin-bottom:12px;">📍</span>
+                    <p style="color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;">Endereço</p>
+                    <p style="color:#a09880;font-size:14px;line-height:1.7;">R. Nepal, 615<br>Parque Capuava, Santo André – SP</p>
+                </div>
+                <div style="text-align:center;">
+                    <span style="font-size:36px;display:block;margin-bottom:12px;">🕐</span>
+                    <p style="color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;">Horários</p>
+                    <p style="color:#a09880;font-size:14px;line-height:1.7;">Ter–Sex: 09h–19h<br>Sábado: 09h–17h</p>
+                </div>
+                <div style="text-align:center;">
+                    <span style="font-size:36px;display:block;margin-bottom:12px;">📱</span>
+                    <p style="color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;">Contato</p>
+                    <p style="color:#a09880;font-size:14px;line-height:1.7;">
+                        <a href="https://wa.me/5511999000000" target="_blank">(11) 9990-0000</a><br>
+                        <a href="https://instagram.com/kleber.pinto.hair" target="_blank">@kleber.pinto.hair</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="../img/kleberlogo.png" class="logo_footer" alt="Kleber Pinto">
+        <div class="footer-social">
+            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+        <p>
+            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i> (11) 9990-0000</a>
+            &nbsp;|&nbsp;
+            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i> @kleber.pinto.hair</a>
+        </p>
+        <p>R. Nepal, 615 — Parque Capuava, Santo André - SP</p>
+        <p class="footer-copy">© 2025 Kleber Pinto Salão de Beleza e Barbearia.</p>
+    </footer>
+
+    <script>
+        // Set min date to today
+        const hoje = new Date().toISOString().split('T')[0];
+        document.getElementById('data').setAttribute('min', hoje);
+
+        function enviarAgendamento() {
+            const nome = document.getElementById('nome').value.trim();
+            const tel  = document.getElementById('telefone').value.trim();
+            const serv = document.getElementById('servico').value;
+            const data = document.getElementById('data').value;
+            const hora = document.getElementById('horario').value;
+
+            if (!nome || !tel || !serv || !data || !hora) {
+                alert('Por favor, preencha todos os campos obrigatórios (*).');
+                return;
+            }
+
+            // Build WhatsApp message
+            const obs  = document.getElementById('obs').value.trim();
+            const dataFormatada = new Date(data + 'T12:00:00').toLocaleDateString('pt-BR', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
+            const msg = `Olá! Gostaria de agendar um horário:\n\n👤 *Nome:* ${nome}\n📋 *Serviço:* ${serv}\n📅 *Data:* ${dataFormatada}\n🕐 *Horário:* ${hora}\n📞 *Telefone:* ${tel}${obs ? '\n📝 *Obs:* ' + obs : ''}`;
+
+            window.open('https://wa.me/5511999000000?text=' + encodeURIComponent(msg), '_blank');
+
+            document.getElementById('alertaSucesso').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('alertaSucesso').offsetTop - 80, behavior: 'smooth' });
+        }
+
+        const els = document.querySelectorAll('.fade-in');
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        els.forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>

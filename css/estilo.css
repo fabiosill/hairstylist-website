@@ -1,163 +1,698 @@
-/*Zerar margem*/
-body{
-    margin:0; 
-    font-family: Arial, Helvetica, sans-serif;  
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+    --gold: #d4a843;
+    --gold-light: #ebde69;
+    --gold-dark: #b8912e;
+    --black: #0e0d0b;
+    --black-soft: #1a1815;
+    --grey-dark: #2a2722;
+    --grey-mid: #3d3a34;
+    --white: #f5f0e8;
+    --font-display: 'Great Vibes', cursive;
+    --font-body: 'Montserrat', sans-serif;
 }
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
-    color: #ebde69;
+    color: var(--gold-light);
+    transition: color 0.3s;
 }
-/*Cor do cabeçalho*/
-header{
-    background: 
-    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)),
-    url('../img/kleberquimica.jpg') center/cover no-repeat;
-}
-.p-vip{
-    font-family: "Cookie", cursive;
-    font-style: normal;
-    text-align: center;
-    color: #ebde69;
-    margin-bottom: 5vh;
-    font-size: 100px;
-}
-.p-vip1{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    text-align: center;
-    color: #f1edc7;
-    margin-top: -3vh;
-    font-size: 30px;
-}
-.p-vip2{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    text-align: center;
-    color: #fff069;
-    margin-top: -3vh;
-    font-size: 30px;
-}
-.header-btn{
-    font-weight: 600;
-    color: #ffffff;
-    font-size: 20px;
-    background-color: #d6c846;
-}
-.div-vip{
-    padding-bottom: 30vh;
-    justify-content: center;
-    text-align: center;
+a:hover { color: #fff; }
 
+/* ===================== HEADER / NAV ===================== */
+header {
+    position: relative;
+    background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.6)),
+        url('../img/kleberquimica.jpg') center/cover no-repeat;
+    min-height: 90px;
 }
-/*Tamanho do logo, posicionamento*/
-.logo{
-    margin-left: 14vh;
-    width: 8%;
-    padding: 10px 0 20px 5%;
-}
-/*Cor do menu, posição, tamanho da fonte, tipo de fonte*/
-nav{
-    color: #ebde69;
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    font-size: 18px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-/*escrita em fileira, longe de 30px da margem*/
-nav li{
-    display: inline;
-    margin-right: 30px;
-}
-.divHeader{
+
+.divHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 5% 18px 5%;
     position: relative;
 }
 
-/*Estilização de títulos*/
-.titulos {
+.logo {
+    width: 80px;
+    filter: drop-shadow(0 2px 8px rgba(212,168,67,0.4));
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a,
+nav ul li {
+    color: var(--gold-light);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.25s, letter-spacing 0.25s;
+    white-space: nowrap;
+}
+
+nav ul li a:hover,
+nav ul li:hover {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+nav ul li.active a {
+    color: #fff;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+}
+
+/* ===================== HERO (index only) ===================== */
+.hero-section {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: rgb(0, 0, 0);
+    padding: 60px 20px 80px;
 }
-.titulos2 {      
-    float: center;
-    margin-right: 10%;
-    color: rgb(0, 0, 0); 
-    font-size:large;
-}    
-.sobrenos{
-    width: 60%;
-    text-align: justify;
-    line-height: 1.5;
-    margin-left: 20%;
+
+.p-vip {
+    font-family: var(--font-display);
+    font-size: clamp(60px, 10vw, 120px);
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 24px rgba(212,168,67,0.4);
+    animation: fadeDown 1s ease both;
 }
-.imgsobrenos{
-    
-    width: 18%;
-    float: left;
-    margin-right: 2%;
-    border-radius: 5%;
+
+.p-vip1 {
+    font-size: clamp(16px, 2.5vw, 28px);
+    color: #f1edc7;
+    letter-spacing: 6px;
+    font-weight: 300;
+    margin-bottom: 6px;
+    animation: fadeDown 1.2s ease both;
 }
-/*Estilização da sessão NOSSO ESTABELECIMENTO*/
-.mapa{
+
+.p-vip2 {
+    font-size: clamp(14px, 2vw, 22px);
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    animation: fadeDown 1.4s ease both;
+}
+
+.header-btn {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    animation: fadeUp 1.6s ease both;
+}
+
+.header-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+
+.header-btn p { margin: 0; }
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== SECTION TITLES ===================== */
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 60px);
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #b0a882;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* ===================== SEPARATOR ===================== */
+.sep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 50px;
+    max-width: 300px;
+}
+.sep::before, .sep::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+}
+.sep::after { background: linear-gradient(to left, transparent, var(--gold)); }
+.sep-icon { color: var(--gold); font-size: 18px; }
+
+/* ===================== MAPA (index) ===================== */
+.mapa {
+    background: var(--black-soft);
+    padding: 80px 5%;
     text-align: center;
 }
-.titulosmap {
-    text-align: center;
-    color: rgb(0, 0, 0);  
+
+.mapa iframe {
+    border: 2px solid var(--gold-dark);
+    max-width: 100%;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
-/*imagem do div*/
-.imglogo{
-    width: 10%;
-    float: right;
-    margin-right: 35%;
-    border-radius: 5%;
-    box-shadow: 10px 10px 15px 0px black;
-    opacity: 1;
-    transition: 400ms;
+
+/* ===================== PRODUTOS SECTION (index) ===================== */
+.produtos-section {
+    background: var(--black);
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.imglogo:hover{
-    opacity: 0.5;
+
+.produtos-text { flex: 1; min-width: 280px; max-width: 500px; }
+
+.produtos-list {
+    list-style: none;
+    margin: 20px 0 0;
+}
+
+.produtos-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--grey-dark);
+    color: var(--white);
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.produtos-list li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 10px;
+}
+
+.imglogo {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 12px 12px 30px rgba(0,0,0,0.8), 0 0 0 1px var(--gold-dark);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.imglogo:hover {
+    transform: scale(1.04) rotate(1deg);
+    box-shadow: 16px 16px 40px rgba(0,0,0,0.9), 0 0 0 2px var(--gold);
     cursor: pointer;
 }
-.titulosprod {
-    text-align: left;
-    margin-left: 35%;
-    font-size: 18;
-    color: rgb(0, 0, 0);
-}
 
-/*Sessao vídeo*/
-.video{
+/* ===================== VIDEO ===================== */
+.video {
+    background: var(--black-soft);
+    padding: 80px 5%;
     text-align: center;
-    background-color: linear;
 }
-footer{
-    padding: 30px 10px 10px 0px;
-    background: url("../img/kleberbanner.png");
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: darken;
-    background-color: rgb(31, 29, 29);
+
+.video iframe {
+    max-width: 100%;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+    border: 2px solid var(--grey-dark);
 }
-footer p{
-    padding-left: 40%;
-    color: aliceblue;
-    text-align: left;
+
+/* ===================== SOBRE NÓS ===================== */
+.sobrenos {
+    background: var(--black);
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.imgsobrenos {
+    width: 200px;
+    float: left;
+    margin: 0 30px 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    border: 2px solid var(--gold-dark);
+}
+
+.titulos {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulos2 {
+    color: #c5bda0;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background:
+        linear-gradient(rgba(10,8,5,0.88), rgba(10,8,5,0.88)),
+        url('../img/kleberbanner.png') center/cover no-repeat;
+    padding: 50px 5% 30px;
+    text-align: center;
+    border-top: 1px solid var(--gold-dark);
+}
+
+.logo_footer {
+    width: 90px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+footer p {
+    color: #b0a882;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 8px 0;
+}
+
+footer a {
+    color: var(--gold-light);
+    transition: color 0.25s;
+}
+footer a:hover { color: #fff; }
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 16px 0;
+    font-size: 22px;
+}
+
+.footer-copy {
+    color: var(--grey-mid);
+    font-size: 12px;
+    margin-top: 20px;
+    border-top: 1px solid var(--grey-dark);
+    padding-top: 16px;
+}
+
+/* ===================== PAGE BANNER (interior pages) ===================== */
+.page-banner {
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('../img/kleberquimica.jpg') center/cover no-repeat;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 80px);
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    color: #b0a882;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/* ===================== CARDS ===================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.card {
+    background: var(--grey-dark);
+    border: 1px solid var(--grey-mid);
+    border-radius: 4px;
+    padding: 36px 24px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.card h3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #a09880;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card .price {
+    margin-top: 16px;
     font-size: 18px;
-    text-decoration: none;
-}
-footer a{
-    color: rgb(240, 248, 255);
-    text-decoration: none;
-}
-.logo_footer{
-    width:15%;
-    padding-left: 42.5%;
+    font-weight: 700;
+    color: var(--gold-light);
 }
 
-nav a:hover{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+/* ===================== FORM ===================== */
+.form-section {
+    background: var(--black-soft);
+    padding: 80px 5%;
 }
 
+.form-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: var(--grey-dark);
+    border: 1px solid var(--grey-mid);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    padding: 14px 18px;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.25s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+}
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { background: var(--grey-dark); }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 48px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 8px;
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+/* ===================== UNIDADE INFO ===================== */
+.unidade-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 5%;
+    align-items: start;
+}
+
+.unidade-details h3 {
+    font-family: var(--font-display);
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    color: var(--gold);
+    font-size: 20px;
+    min-width: 24px;
+    margin-top: 2px;
+}
+
+.info-text strong {
+    display: block;
+    color: var(--white);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.info-text span {
+    color: #a09880;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.horario-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.horario-table td {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #a09880;
+    border-bottom: 1px solid var(--grey-dark);
+}
+
+.horario-table td:first-child {
+    color: var(--white);
+    font-weight: 600;
+    width: 140px;
+}
+
+/* ===================== BARBEARIA PAGE ===================== */
+.barbearia-hero {
+    background: var(--black-soft);
+    padding: 80px 5%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.barbearia-img {
+    flex: 0 0 320px;
+    border-radius: 4px;
+    border: 2px solid var(--gold-dark);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.7);
+    width: 320px;
+    object-fit: cover;
+    height: 400px;
+}
+
+.barbearia-text { flex: 1; min-width: 260px; }
+
+.barbearia-text h2 {
+    font-family: var(--font-display);
+    font-size: 52px;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.barbearia-text p {
+    color: #b0a882;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.servicos-section {
+    background: var(--black);
+    padding: 80px 5%;
+}
+
+.agendamento-section {
+    background: var(--black-soft);
+    padding: 80px 5%;
+}
+
+/* ===================== TRABALHE CONOSCO ===================== */
+.trabalhe-hero {
+    background: var(--black-soft);
+    padding: 80px 5%;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trabalhe-hero p {
+    color: #b0a882;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5% 80px;
+}
+
+.beneficio-item {
+    background: var(--grey-dark);
+    border: 1px solid var(--grey-mid);
+    border-radius: 4px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.beneficio-item:hover { border-color: var(--gold); }
+
+.beneficio-item span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.beneficio-item h4 {
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.beneficio-item p {
+    color: #a09880;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ===================== SUCCESS / ALERT ===================== */
+.alert-success {
+    background: rgba(212,168,67,0.1);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    padding: 16px 24px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+    margin-top: 16px;
+}
+
+/* ===================== ANIMATIONS ===================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    nav ul { gap: 16px; }
+    nav ul li a, nav ul li { font-size: 11px; letter-spacing: 0.5px; }
+    .logo { width: 60px; }
+    .unidade-info { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .barbearia-img { width: 100%; flex: unset; height: 260px; }
+    .produtos-section { flex-direction: column; text-align: center; }
+    .imgsobrenos { float: none; display: block; margin: 0 auto 20px; width: 160px; }
+}
