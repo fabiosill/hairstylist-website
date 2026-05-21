@@ -9,76 +9,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER -->
     <header>
         <div class="divHeader">
             <img src="img/kleberlogo.png" class="logo" alt="Kleber Pinto Logo">
             <nav>
                 <ul>
                     <li class="active"><a href="index.html">INÍCIO</a></li>
-                    <li><a href="pages/produtos.html">PRODUTOS</a></li>
                     <li><a href="pages/unidade.html">UNIDADE</a></li>
                     <li><a href="pages/trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
                     <li><a href="pages/a-barbearia.html">A BARBEARIA</a></li>
-                    <li><a href="pages/agendamento.html">AGENDAMENTO</a></li>
+                    <li><a href="pages/agendamento.html">AGENDAR</a></li>
                 </ul>
             </nav>
         </div>
-
-        <!-- HERO -->
         <div class="hero-section">
+            <p class="p-vip3">K .P.</p>
             <p class="p-vip">Tratamento Vip</p>
-            <p class="p-vip1">BARBA &nbsp;|&nbsp; CABELO &nbsp;|&nbsp; QUÍMICA</p>
-            <p class="p-vip2">SERVIÇOS DE QUALIDADE!</p>
+            <p class="p-vip1">BARBA &nbsp;|&nbsp; CABELO &nbsp;|&nbsp; QUÍMICA</p><br><br>
+            <p class="p-vip2">Salão de beleza de alto padrão<br>Especializada em beleza feminina e masculina!</p>
             <button class="header-btn" onclick="window.location.href='pages/agendamento.html'">
                 <p>Agende já seu horário!</p>
             </button>
         </div>
     </header>
 
+    
     <main>
-
-        <!-- NOSSO ESTABELECIMENTO -->
-        <section class="mapa fade-in">
-            <br>
-            <p class="section-title">Nosso Estabelecimento</p>
-            <p class="section-subtitle">Veja abaixo onde nos encontrar</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4455.457822448383!2d-46.48977516111165!3d-23.641258923388083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce684f7e9ae2c9%3A0x64a2fa1d9ebfc7bb!2sR.%20Nepal%2C%20615%20-%20Parque%20Capuava%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009270-110!5e0!3m2!1spt-BR!2sbr!4v1772755086611!5m2!1spt-BR!2sbr"
-                width="700" height="420" style="border:0;" allowfullscreen loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <br><br>
-        </section>
-
-        <!-- NOSSOS PRODUTOS -->
-        <section class="produtos-section fade-in">
-            <div class="produtos-text">
-                <p class="section-title" style="text-align:left;">Produtos</p>
-                <p class="section-subtitle" style="text-align:left;margin-left:0;">Linha profissional exclusiva</p>
-                <ul class="produtos-list">
-                    <li>Shampoo profissional</li>
-                    <li>Condicionador hidratante</li>
-                    <li>Tinta & coloração</li>
-                    <li>Perfume masculino</li>
-                    <li>Pomada modeladora</li>
-                    <li>Óleo para barba</li>
-                </ul>
-                <br>
-                <a href="pages/produtos.html" style="display:inline-block;margin-top:16px;padding:12px 32px;border:2px solid var(--gold);color:var(--gold);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;transition:all .3s;" onmouseover="this.style.background='var(--gold)';this.style.color='#0e0d0b'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
-                    Ver todos os produtos
-                </a>
-            </div>
-            <img src="img/kleberlogo.png" class="imglogo" alt="Kleber Pinto">
-        </section>
-
         <!-- VÍDEO -->
         <section class="video fade-in">
             <p class="section-title">Veja Nosso Trabalho</p>
@@ -89,46 +52,15 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
-            <br><br>
         </section>
-
-        <!-- SOBRE NÓS -->
-        <section style="background:var(--black);padding:80px 5%;" class="fade-in">
-            <div class="sobrenos">
-                <p class="titulos">Sobre Nós</p>
-                <img src="img/kleberpessoa.png" class="imgsobrenos" alt="Kleber Pinto">
-                <p class="titulos2">
-                    Está procurando mais do que um simples corte de cabelo? Seja bem-vindo ao lugar certo!
-                    Aqui, cada cliente é único. Nosso trabalho vai além da tesoura e da máquina: valorizamos seu estilo, sua personalidade e aquilo que faz você se destacar.<br><br>
-                    Em nosso salão, cuidado e atenção caminham juntos para oferecer uma experiência completa — do atendimento acolhedor ao resultado final no espelho.
-                    Com técnicas modernas, produtos de qualidade e constante atualização nas tendências, transformamos ideias em realidade.<br><br>
-                    Seja para um corte clássico, um degradê impecável, barba desenhada, hidratação ou mudança de visual, nosso compromisso é entregar confiança, autoestima e satisfação.
-                    Mais do que um cabeleireiro, somos especialistas em renovar estilos e elevar sua confiança.
-                </p>
-                <div style="clear:both;"></div>
-                <div style="text-align:center;margin-top:36px;">
-                    <a href="pages/a-barbearia.html" style="display:inline-block;padding:12px 36px;border:2px solid var(--gold);color:var(--gold);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;transition:all .3s;" onmouseover="this.style.background='var(--gold)';this.style.color='#0e0d0b'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
-                        Conheça a Barbearia
-                    </a>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <img src="img/kleberlogo.png" class="logo_footer" alt="Kleber Pinto">
         <div class="footer-social">
-            <a href="https://wa.me/5511984701353" target="_blank" title="WhatsApp">
-                <i class="fa fa-whatsapp"></i>
-            </a>
-            <a href="https://instagram.com/kleber.pinto.hair" target="_blank" title="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <a href="#" title="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
+            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
         </div>
         <p>
             <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i> (11) 9990-0000</a>
@@ -140,10 +72,9 @@
     </footer>
 
     <script>
-        // Fade-in on scroll
         const els = document.querySelectorAll('.fade-in');
         const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.15 });
         els.forEach(el => obs.observe(el));
     </script>

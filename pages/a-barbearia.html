@@ -19,11 +19,10 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
-                    <li><a href="produtos.html">PRODUTOS</a></li>
                     <li><a href="unidade.html">UNIDADE</a></li>
                     <li><a href="trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
                     <li class="active"><a href="a-barbearia.html">A BARBEARIA</a></li>
-                    <li><a href="agendamento.html">AGENDAMENTO</a></li>
+                    <li><a href="agendamento.html">AGENDAR</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,43 +35,36 @@
     <main>
 
         <!-- HISTÓRIA -->
-        <section style="background:var(--black);padding:80px 5%;" class="fade-in">
+        <section class="sec-black fade-in">
             <div class="barbearia-hero">
                 <img src="../img/kleberpessoa.png" alt="Kleber Pinto" class="barbearia-img">
                 <div class="barbearia-text">
                     <h2>Nossa História</h2>
-                    <p>
-                        O Kleber Pinto Salão de Beleza e Barbearia nasceu da paixão por transformar estilos e elevar a autoestima de cada cliente. Com anos de experiência no mercado, Kleber construiu uma reputação sólida baseada em qualidade, cuidado e criatividade.
-                    </p>
-                    <p>
-                        Mais do que um salão, somos um espaço de acolhimento onde homens e mulheres encontram profissionais que entendem suas necessidades e entregam resultados que fazem a diferença.
-                    </p>
-                    <p>
-                        Instalado no Parque Capuava, em Santo André, nosso espaço combina ambiente moderno, produtos de alta performance e técnicas atualizadas com as principais tendências nacionais e internacionais.
-                    </p>
-                    <div style="display:flex;gap:16px;margin-top:28px;flex-wrap:wrap;">
-                        <div style="text-align:center;padding:20px 28px;background:var(--grey-dark);border:1px solid var(--gold-dark);border-radius:4px;">
-                            <p style="font-family:var(--font-display);font-size:42px;color:var(--gold);line-height:1;">10+</p>
-                            <p style="color:#a09880;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Anos de experiência</p>
+                    <p>O Kleber Pinto Salão de Beleza e Barbearia nasceu da paixão por transformar estilos e elevar a autoestima de cada cliente. Com anos de experiência no mercado, Kleber construiu uma reputação sólida baseada em qualidade, cuidado e criatividade.</p>
+                    <p>Mais do que um salão, somos um espaço de acolhimento onde homens e mulheres encontram profissionais que entendem suas necessidades e entregam resultados que fazem a diferença.</p>
+                    <p>Instalado no Parque Capuava, em Santo André, nosso espaço combina ambiente moderno, produtos de alta performance e técnicas atualizadas com as principais tendências nacionais e internacionais.</p>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <p class="stat-num">10+</p>
+                            <p class="stat-label">Anos de experiência</p>
                         </div>
-                        <div style="text-align:center;padding:20px 28px;background:var(--grey-dark);border:1px solid var(--gold-dark);border-radius:4px;">
-                            <p style="font-family:var(--font-display);font-size:42px;color:var(--gold);line-height:1;">500+</p>
-                            <p style="color:#a09880;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Clientes satisfeitos</p>
+                        <div class="stat-box">
+                            <p class="stat-num">500+</p>
+                            <p class="stat-label">Clientes satisfeitos</p>
                         </div>
-                        <div style="text-align:center;padding:20px 28px;background:var(--grey-dark);border:1px solid var(--gold-dark);border-radius:4px;">
-                            <p style="font-family:var(--font-display);font-size:42px;color:var(--gold);line-height:1;">5★</p>
-                            <p style="color:#a09880;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Avaliação média</p>
+                        <div class="stat-box">
+                            <p class="stat-num">5★</p>
+                            <p class="stat-label">Avaliação média</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- NOSSOS SERVIÇOS -->
+        <!-- SERVIÇOS -->
         <section class="servicos-section fade-in">
             <p class="section-title">Nossos Serviços</p>
             <p class="section-subtitle">Tudo que você precisa em um só lugar</p>
-
             <div class="cards-grid">
                 <div class="card">
                     <span class="card-icon">✂️</span>
@@ -111,84 +103,67 @@
                     <p class="price">A partir de R$ 25</p>
                 </div>
             </div>
-
-            <div style="text-align:center;margin-top:50px;">
-                <a href="agendamento.html"
-                    style="display:inline-block;padding:14px 48px;background:var(--gold);color:var(--black);font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase;transition:background .3s;"
-                    onmouseover="this.style.background='var(--gold-light)'"
-                    onmouseout="this.style.background='var(--gold)'">
-                    Agendar Meu Horário
-                </a>
+            <div class="center-wrap">
+                <a href="agendamento.html" class="btn-solid">Agendar Meu Horário</a>
             </div>
         </section>
 
         <!-- DIFERENCIAIS -->
-        <section style="background:var(--black-soft);padding:80px 5%;" class="fade-in">
+        <section class="sec-soft fade-in">
             <p class="section-title">Nossos Diferenciais</p>
             <p class="section-subtitle">O que nos torna únicos</p>
-
-            <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px;">
-
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:28px;background:var(--grey-dark);border-radius:4px;border:1px solid var(--grey-mid);transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <span style="font-size:32px;min-width:40px;">🎓</span>
+            <div class="grid-diferenciais">
+                <div class="diferencial">
+                    <span class="diferencial__icon">🎓</span>
                     <div>
-                        <h4 style="color:var(--gold);margin-bottom:8px;font-size:15px;letter-spacing:1px;">Profissionais Qualificados</h4>
-                        <p style="color:#a09880;font-size:14px;line-height:1.7;">Equipe constantemente treinada nos principais cursos e tendências do mercado nacional e internacional.</p>
+                        <h4 class="diferencial__title">Profissionais Qualificados</h4>
+                        <p class="diferencial__desc">Equipe constantemente treinada nos principais cursos e tendências do mercado nacional e internacional.</p>
                     </div>
                 </div>
-
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:28px;background:var(--grey-dark);border-radius:4px;border:1px solid var(--grey-mid);transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <span style="font-size:32px;min-width:40px;">🛡️</span>
+                <div class="diferencial">
+                    <span class="diferencial__icon">🛡️</span>
                     <div>
-                        <h4 style="color:var(--gold);margin-bottom:8px;font-size:15px;letter-spacing:1px;">Produtos Premium</h4>
-                        <p style="color:#a09880;font-size:14px;line-height:1.7;">Utilizamos apenas produtos profissionais de marcas reconhecidas, garantindo saúde e resultado nos seus fios.</p>
+                        <h4 class="diferencial__title">Produtos Premium</h4>
+                        <p class="diferencial__desc">Utilizamos apenas produtos profissionais de marcas reconhecidas, garantindo saúde e resultado nos seus fios.</p>
                     </div>
                 </div>
-
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:28px;background:var(--grey-dark);border-radius:4px;border:1px solid var(--grey-mid);transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <span style="font-size:32px;min-width:40px;">📅</span>
+                <div class="diferencial">
+                    <span class="diferencial__icon">📅</span>
                     <div>
-                        <h4 style="color:var(--gold);margin-bottom:8px;font-size:15px;letter-spacing:1px;">Agendamento Online</h4>
-                        <p style="color:#a09880;font-size:14px;line-height:1.7;">Marque seu horário de onde estiver, pelo site ou WhatsApp. Sem fila, sem espera, com praticidade total.</p>
+                        <h4 class="diferencial__title">Agendamento Online</h4>
+                        <p class="diferencial__desc">Marque seu horário de onde estiver, pelo site ou WhatsApp. Sem fila, sem espera, com praticidade total.</p>
                     </div>
                 </div>
-
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:28px;background:var(--grey-dark);border-radius:4px;border:1px solid var(--grey-mid);transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <span style="font-size:32px;min-width:40px;">🤝</span>
+                <div class="diferencial">
+                    <span class="diferencial__icon">🤝</span>
                     <div>
-                        <h4 style="color:var(--gold);margin-bottom:8px;font-size:15px;letter-spacing:1px;">Atendimento Personalizado</h4>
-                        <p style="color:#a09880;font-size:14px;line-height:1.7;">Cada cliente recebe atenção individual. Entendemos seu estilo e trabalhamos para superar suas expectativas.</p>
+                        <h4 class="diferencial__title">Atendimento Personalizado</h4>
+                        <p class="diferencial__desc">Cada cliente recebe atenção individual. Entendemos seu estilo e trabalhamos para superar suas expectativas.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- DEPOIMENTOS -->
-        <section style="background:var(--black);padding:80px 5%;" class="fade-in">
+        <section class="sec-black fade-in">
             <p class="section-title">O que dizem nossos clientes</p>
             <p class="section-subtitle">Histórias reais, transformações reais</p>
-
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1000px;margin:0 auto;">
-
-                <div style="background:var(--grey-dark);border:1px solid var(--grey-mid);border-radius:4px;padding:28px;transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <p style="color:var(--gold);font-size:20px;margin-bottom:12px;">★★★★★</p>
-                    <p style="color:#c5bda0;font-size:14px;line-height:1.8;font-style:italic;">"Melhor barbearia que já fui! O Kleber tem um talento incrível e o atendimento é nota 10. Saí de lá renovado!"</p>
-                    <p style="color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:1px;margin-top:16px;text-transform:uppercase;">— Rafael S.</p>
+            <div class="grid-depoimentos">
+                <div class="depoimento">
+                    <p class="depoimento__stars">★★★★★</p>
+                    <p class="depoimento__texto">"Melhor barbearia que já fui! O Kleber tem um talento incrível e o atendimento é nota 10. Saí de lá renovado!"</p>
+                    <p class="depoimento__autor">— Rafael S.</p>
                 </div>
-
-                <div style="background:var(--grey-dark);border:1px solid var(--grey-mid);border-radius:4px;padding:28px;transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <p style="color:var(--gold);font-size:20px;margin-bottom:12px;">★★★★★</p>
-                    <p style="color:#c5bda0;font-size:14px;line-height:1.8;font-style:italic;">"Fiz hidratação e coloração e o resultado foi incrível! Profissionais atenciosos, ambiente ótimo. Super recomendo!"</p>
-                    <p style="color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:1px;margin-top:16px;text-transform:uppercase;">— Carla M.</p>
+                <div class="depoimento">
+                    <p class="depoimento__stars">★★★★★</p>
+                    <p class="depoimento__texto">"Fiz hidratação e coloração e o resultado foi incrível! Profissionais atenciosos, ambiente ótimo. Super recomendo!"</p>
+                    <p class="depoimento__autor">— Carla M.</p>
                 </div>
-
-                <div style="background:var(--grey-dark);border:1px solid var(--grey-mid);border-radius:4px;padding:28px;transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <p style="color:var(--gold);font-size:20px;margin-bottom:12px;">★★★★★</p>
-                    <p style="color:#c5bda0;font-size:14px;line-height:1.8;font-style:italic;">"Já sou cliente há mais de 3 anos. O Kleber sempre acerta no corte e a barba fica impecável. Lugar de confiança!"</p>
-                    <p style="color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:1px;margin-top:16px;text-transform:uppercase;">— Bruno A.</p>
+                <div class="depoimento">
+                    <p class="depoimento__stars">★★★★★</p>
+                    <p class="depoimento__texto">"Já sou cliente há mais de 3 anos. O Kleber sempre acerta no corte e a barba fica impecável. Lugar de confiança!"</p>
+                    <p class="depoimento__autor">— Bruno A.</p>
                 </div>
-
             </div>
         </section>
 
@@ -213,7 +188,7 @@
     <script>
         const els = document.querySelectorAll('.fade-in');
         const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         els.forEach(el => obs.observe(el));
     </script>

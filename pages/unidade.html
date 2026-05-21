@@ -19,11 +19,10 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
-                    <li><a href="produtos.html">PRODUTOS</a></li>
                     <li class="active"><a href="unidade.html">UNIDADE</a></li>
                     <li><a href="trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
                     <li><a href="a-barbearia.html">A BARBEARIA</a></li>
-                    <li><a href="agendamento.html">AGENDAMENTO</a></li>
+                    <li><a href="agendamento.html">AGENDAR</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,30 +35,25 @@
     <main>
 
         <!-- MAPA + INFO -->
-        <section style="background:var(--black);padding:80px 5%;" class="fade-in">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1100px;margin:0 auto;align-items:start;flex-wrap:wrap;">
+        <section class="sec-black fade-in">
+            <div class="grid-diferenciais">
 
-                <!-- Mapa -->
                 <div>
-                    <p class="section-title" style="text-align:left;font-size:clamp(28px,4vw,46px);">Como chegar</p>
-                    <div class="sep" style="justify-content:flex-start;max-width:200px;margin:0 0 30px;"></div>
-                    <iframe
+                    <p class="section-title section-title--left section-title--sm">Como chegar</p>
+                    <div class="sep"></div>
+                    <iframe class="unidade-mapa-iframe"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4455.457822448383!2d-46.48977516111165!3d-23.641258923388083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce684f7e9ae2c9%3A0x64a2fa1d9ebfc7bb!2sR.%20Nepal%2C%20615%20-%20Parque%20Capuava%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009270-110!5e0!3m2!1spt-BR!2sbr!4v1772755086611!5m2!1spt-BR!2sbr"
-                        width="100%" height="380" style="border:0;border:2px solid var(--gold-dark);display:block;" allowfullscreen loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <a href="https://maps.google.com/?q=R.+Nepal,+615,+Parque+Capuava,+Santo+André+SP" target="_blank"
-                        style="display:inline-block;margin-top:16px;padding:10px 28px;border:2px solid var(--gold);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all .3s;"
-                        onmouseover="this.style.background='var(--gold)';this.style.color='#0e0d0b'"
-                        onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
+                    <a href="https://maps.google.com/?q=R.+Nepal,+615,+Parque+Capuava,+Santo+André+SP"
+                        target="_blank" class="btn-maps">
                         <i class="fa fa-map-marker"></i> &nbsp;Abrir no Google Maps
                     </a>
                 </div>
 
-                <!-- Informações -->
                 <div class="unidade-details">
                     <h3>Kleber Pinto</h3>
-                    <p style="color:#a09880;font-size:14px;margin-bottom:32px;line-height:1.7;">
+                    <p class="unidade-desc">
                         Localizado no coração do Parque Capuava, em Santo André, nosso salão oferece um ambiente acolhedor e moderno, preparado para transformar seu visual com todo o cuidado que você merece.
                     </p>
 
@@ -70,7 +64,6 @@
                             <span>R. Nepal, 615 — Parque Capuava<br>Santo André – SP, CEP 09270-110</span>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <span class="info-icon"><i class="fa fa-phone"></i></span>
                         <div class="info-text">
@@ -78,7 +71,6 @@
                             <span><a href="https://wa.me/5511999000000" target="_blank">(11) 9990-0000</a></span>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <span class="info-icon"><i class="fa fa-instagram"></i></span>
                         <div class="info-text">
@@ -86,7 +78,6 @@
                             <span><a href="https://instagram.com/kleber.pinto.hair" target="_blank">@kleber.pinto.hair</a></span>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <span class="info-icon"><i class="fa fa-clock-o"></i></span>
                         <div class="info-text">
@@ -99,7 +90,6 @@
                             </table>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <span class="info-icon"><i class="fa fa-car"></i></span>
                         <div class="info-text">
@@ -112,49 +102,43 @@
             </div>
         </section>
 
-        <!-- FOTO DO SALÃO -->
-        <section style="background:var(--black-soft);padding:80px 5%;" class="fade-in">
+        <!-- O AMBIENTE -->
+        <section class="sec-soft fade-in">
             <p class="section-title">O Ambiente</p>
             <p class="section-subtitle">Um espaço criado para o seu conforto</p>
+            <div class="grid-auto-300">
 
-            <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
-
-                <div style="position:relative;overflow:hidden;border:1px solid var(--grey-mid);border-radius:4px;transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <img src="../img/kleberquimica.jpg" alt="Salão" style="width:100%;height:280px;object-fit:cover;display:block;transition:transform .5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="padding:20px;background:var(--grey-dark);">
-                        <p style="color:var(--gold);font-weight:700;font-size:14px;letter-spacing:1px;margin-bottom:6px;">AMBIENTE MODERNO</p>
-                        <p style="color:#a09880;font-size:13px;line-height:1.6;">Espaço climatizado, decorado com estilo e equipado com o que há de melhor em tecnologia capilar.</p>
+                <div class="foto-card">
+                    <img src="../img/kleberquimica.jpg" alt="Salão" class="foto-card__img">
+                    <div class="foto-card__body">
+                        <p class="foto-card__title">Ambiente Moderno</p>
+                        <p class="foto-card__desc">Espaço climatizado, decorado com estilo e equipado com o que há de melhor em tecnologia capilar.</p>
                     </div>
                 </div>
 
-                <div style="position:relative;overflow:hidden;border:1px solid var(--grey-mid);border-radius:4px;transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <img src="../img/kleberpessoa.png" alt="Profissional" style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;transition:transform .5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="padding:20px;background:var(--grey-dark);">
-                        <p style="color:var(--gold);font-weight:700;font-size:14px;letter-spacing:1px;margin-bottom:6px;">EQUIPE ESPECIALIZADA</p>
-                        <p style="color:#a09880;font-size:13px;line-height:1.6;">Profissionais treinados e atualizados nas últimas tendências de corte, barba e tratamento capilar.</p>
+                <div class="foto-card">
+                    <img src="../img/kleberpessoa.png" alt="Profissional" class="foto-card__img">
+                    <div class="foto-card__body">
+                        <p class="foto-card__title">Equipe Especializada</p>
+                        <p class="foto-card__desc">Profissionais treinados e atualizados nas últimas tendências de corte, barba e tratamento capilar.</p>
                     </div>
                 </div>
 
-                <div style="overflow:hidden;border:1px solid var(--grey-mid);border-radius:4px;background:var(--grey-dark);display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:348px;transition:border-color .3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--grey-mid)'">
-                    <span style="font-size:56px;margin-bottom:20px;">✂️</span>
-                    <p style="color:var(--gold);font-family:var(--font-display);font-size:28px;margin-bottom:8px;text-align:center;">Agende sua visita</p>
-                    <p style="color:#a09880;font-size:13px;text-align:center;padding:0 20px;line-height:1.6;margin-bottom:24px;">Conheça pessoalmente nosso espaço e saia transformado!</p>
-                    <a href="agendamento.html"
-                        style="padding:10px 28px;background:var(--gold);color:var(--black);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;transition:background .3s;"
-                        onmouseover="this.style.background='var(--gold-light)'"
-                        onmouseout="this.style.background='var(--gold)'">
-                        Agendar Agora
-                    </a>
+                <div class="foto-card--cta">
+                    <span class="cta-icon">✂️</span>
+                    <p class="cta-title">Agende sua visita</p>
+                    <p class="cta-desc">Conheça pessoalmente nosso espaço e saia transformado!</p>
+                    <a href="agendamento.html" class="btn-cta">Agendar Agora</a>
                 </div>
 
             </div>
         </section>
 
-        <!-- FRASES -->
-        <section style="background:var(--black);padding:80px 5%;text-align:center;" class="fade-in">
+        <!-- POR QUE NOS ESCOLHER -->
+        <section class="sec-black-center fade-in">
             <p class="section-title">Por que nos escolher?</p>
             <p class="section-subtitle">Nossa missão vai além do corte</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;max-width:900px;margin:0 auto;">
+            <div class="cards-grid">
                 <div class="card">
                     <span class="card-icon">🏆</span>
                     <h3>Excelência</h3>
@@ -199,7 +183,7 @@
     <script>
         const els = document.querySelectorAll('.fade-in');
         const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         els.forEach(el => obs.observe(el));
     </script>
