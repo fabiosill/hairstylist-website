@@ -32,8 +32,7 @@ body {
     color: var(--white);
     overflow-x: hidden;
 }
-
-a { text-decoration: none; color: var(--gold-light); transition: color 0.3s; }
+a {  text-decoration: none; var(--gold-light); transition: color 0.3s; }
 a:hover { color: #fff; }
 
 /* ─── HEADER / NAV ─── */
@@ -62,10 +61,14 @@ nav ul { list-style: none; display: flex; gap: 32px; padding: 0; margin: 0; }
 
 nav ul li a,
 nav ul li {
-    color: var(--gold-light);
+    background: linear-gradient(90deg, #ece0b8, #eccf6d);
+    color:var(--gold-light);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow: 0 0 30px #d4af3799, 0 0 60px #a67c0066;
     font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 550;
+    font-size: 12px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-decoration: none;
@@ -74,7 +77,7 @@ nav ul li {
     white-space: nowrap;
 }
 nav ul li a:hover,
-nav ul li:hover { color: #fff; letter-spacing: 2px; }
+nav ul li:hover {  background: linear-gradient(90deg, #e9c074, #dfbd4f); letter-spacing: 2px;     -webkit-background-clip:text;}
 
 nav ul li.active a {
     color: #fff;
@@ -83,6 +86,11 @@ nav ul li.active a {
 }
 
 /* ─── HERO (index) ─── */
+section{
+    border-top: 1px solid #cf9c023a;
+}
+.hero__logo{width:160px;height:160px;border-radius:50%;object-fit:contain;margin-bottom:28px;animation:fadeDown .8s ease both}
+
 .hero-section {
     min-height: 88vh;
     display: flex;
@@ -92,7 +100,6 @@ nav ul li.active a {
     text-align: center;
     padding: 30px 20px 80px;
 }
-
 .p-vip {
     background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     font-size:120px;
@@ -134,6 +141,26 @@ nav ul li.active a {
     margin-bottom: 0px;
 
     text-shadow: 0 0 30px #d4af3799, 0 0 60px #a67c0066;
+}
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: fadeDown 0.8s 0.3s ease both;
+}
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--grey-light);
 }
 
 .header-btn{
@@ -182,6 +209,7 @@ nav ul li.active a {
 
 /* ─── TÍTULOS DE SEÇÃO ─── */
 .section-title {
+    font-family: var(--font-display);
     font-size: clamp(36px, 5vw, 60px);
     color: var(--gold);
     text-align: center;
