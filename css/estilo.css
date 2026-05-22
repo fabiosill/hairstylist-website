@@ -32,7 +32,7 @@ body {
     color: var(--white);
     overflow-x: hidden;
 }
-a {  text-decoration: none; var(--gold-light); transition: color 0.3s; }
+a {  text-decoration: none; transition: color 0.3s; }
 a:hover { color: #fff; }
 
 /* ─── HEADER / NAV ─── */
