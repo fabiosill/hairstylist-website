@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hairstylist K.P</title>
-    <link rel="icon" href="../img/kleberlogo.png" type="image/png">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Hairstylist K.P</title>
 </head>
 <body>
 
     <header>
         <div class="divHeader">
             <img src="../img/kleberlogo.png" class="logo" alt="Kleber Pinto">
-            <nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
                     <li><a href="unidade.html">UNIDADE</a></li>
@@ -26,6 +31,7 @@
                 </ul>
             </nav>
         </div>
+        <div class="nav-overlay" id="navOverlay"></div>
         <div class="page-banner">
             <h1>Agendamento</h1>
             <p>Reserve seu horário com facilidade</p>
@@ -38,10 +44,10 @@
         <section class="sec-intro fade-in">
             <p class="section-subtitle">Preencha o formulário ou entre em contato pelo WhatsApp</p>
             <div class="social-btns">
-                <a href="https://wa.me/5511999000000?text=Olá! Gostaria de agendar um horário." target="_blank" class="btn-wpp">
+                <a href="https://wa.me/5511982950502?text=Olá! Gostaria de agendar um horário." target="_blank" class="btn-wpp">
                     <i class="fa fa-whatsapp"></i> Agendar pelo WhatsApp
                 </a>
-                <a href="https://instagram.com/kleber.pinto.hair" target="_blank" class="btn-ig">
+                <a href="https://instagram.com/studio.kleber.pinto" target="_blank" class="btn-ig">
                     <i class="fa fa-instagram"></i> Mensagem no Instagram
                 </a>
             </div>
@@ -145,8 +151,8 @@
                     <span class="contact-info-item__icon">📱</span>
                     <p class="contact-info-item__label">Contato</p>
                     <p class="contact-info-item__text">
-                        <a href="https://wa.me/5511999000000" target="_blank">(11) 9990-0000</a><br>
-                        <a href="https://instagram.com/kleber.pinto.hair" target="_blank">@kleber.pinto.hair</a>
+                        <a href="https://wa.me/5511982950502" target="_blank">(11) 98295-0502</a><br>
+                        <a href="https://instagram.com/studio.kleber.pinto" target="_blank">@studio.kleber.pinto</a>
                     </p>
                 </div>
             </div>
@@ -157,20 +163,40 @@
     <footer>
         <img src="../img/kleberlogo.png" class="logo_footer" alt="Kleber Pinto">
         <div class="footer-social">
-            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i></a>
-            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://wa.me/5511982950502" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://instagram.com/studio.kleber.pinto" target="_blank"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-facebook"></i></a>
         </div>
         <p>
-            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i> (11) 9990-0000</a>
+            <a href="https://wa.me/5511982950502" target="_blank"><i class="fa fa-whatsapp"></i> (11) 98295-0502</a>
             &nbsp;|&nbsp;
-            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i> @kleber.pinto.hair</a>
+            <a href="https://instagram.com/studio.kleber.pinto" target="_blank"><i class="fa fa-instagram"></i> @studio.kleber.pinto</a>
         </p>
         <p>R. Nepal, 615 — Parque Capuava, Santo André - SP</p>
         <p class="footer-copy">© 2025 Kleber Pinto Salão de Beleza e Barbearia.</p>
     </footer>
 
     <script>
+        const toggle = document.getElementById('menuToggle');
+        const nav    = document.getElementById('mainNav');
+        const overlay= document.getElementById('navOverlay');
+        function closeMenu() {
+            toggle.classList.remove('active');
+            nav.classList.remove('open');
+            overlay.classList.remove('active');
+            toggle.setAttribute('aria-expanded','false');
+            document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        overlay.addEventListener('click', closeMenu);
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
         const hoje = new Date().toISOString().split('T')[0];
         document.getElementById('data').setAttribute('min', hoje);
 
@@ -187,7 +213,7 @@
             const obs = document.getElementById('obs').value.trim();
             const dataFormatada = new Date(data + 'T12:00:00').toLocaleDateString('pt-BR', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
             const msg = `Olá! Gostaria de agendar um horário:\n\n👤 *Nome:* ${nome}\n📋 *Serviço:* ${serv}\n📅 *Data:* ${dataFormatada}\n🕐 *Horário:* ${hora}\n📞 *Telefone:* ${tel}${obs ? '\n📝 *Obs:* ' + obs : ''}`;
-            window.open('https://wa.me/5511999000000?text=' + encodeURIComponent(msg), '_blank');
+            window.open('https://wa.me/5511982950502?text=' + encodeURIComponent(msg), '_blank');
             const alerta = document.getElementById('alertaSucesso');
             alerta.style.display = 'block';
             window.scrollTo({ top: alerta.offsetTop - 80, behavior: 'smooth' });
@@ -199,5 +225,10 @@
         }, { threshold: 0.1 });
         els.forEach(el => obs.observe(el));
     </script>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511982950502" target="_blank" class="btn-flutuante" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
 </body>
 </html>

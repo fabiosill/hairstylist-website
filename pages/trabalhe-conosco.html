@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hairstylist K.P</title>
-    <link rel="icon" href="../img/kleberlogo.png" type="image/png">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Hairstylist K.P</title>
 </head>
 <body>
 
     <header>
         <div class="divHeader">
             <img src="../img/kleberlogo.png" class="logo" alt="Kleber Pinto">
-            <nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
                     <li><a href="unidade.html">UNIDADE</a></li>
@@ -26,6 +31,7 @@
                 </ul>
             </nav>
         </div>
+        <div class="nav-overlay" id="navOverlay"></div>
         <div class="page-banner">
             <h1>Trabalhe Conosco</h1>
             <p>Faça parte do nosso time de talentos</p>
@@ -35,85 +41,6 @@
     <main>
 
         <!-- INTRO -->
-        <section class="sec-black fade-in">
-            <div class="trabalhe-intro">
-                <p class="section-title">Venha fazer parte do time</p>
-                <div class="section-divider"></div>
-                <p>No Kleber Pinto Salão de Beleza e Barbearia, valorizamos profissionais apaixonados pelo que fazem. Se você tem talento, dedicação e quer crescer em um ambiente profissional, moderno e acolhedor — este é o seu lugar!</p>
-                <p>Buscamos pessoas comprometidas com a excelência, que queiram se desenvolver e oferecer experiências únicas aos nossos clientes.</p>
-            </div>
-        </section>
-
-        <!-- BENEFÍCIOS -->
-        <section class="sec-soft fade-in">
-            <p class="section-title">Nossos Benefícios</p>
-            <p class="section-subtitle">Por que trabalhar conosco</p>
-            <div class="beneficios-grid">
-                <div class="beneficio-item">
-                    <span>💰</span>
-                    <h4>Boa Remuneração</h4>
-                    <p>Comissão competitiva e premiações por desempenho e metas.</p>
-                </div>
-                <div class="beneficio-item">
-                    <span>📚</span>
-                    <h4>Capacitação</h4>
-                    <p>Cursos, workshops e treinamentos para seu desenvolvimento contínuo.</p>
-                </div>
-                <div class="beneficio-item">
-                    <span>🌱</span>
-                    <h4>Crescimento</h4>
-                    <p>Ambiente que incentiva o crescimento profissional e pessoal.</p>
-                </div>
-                <div class="beneficio-item">
-                    <span>🤝</span>
-                    <h4>Equipe Unida</h4>
-                    <p>Time colaborativo, clima agradável e relações profissionais saudáveis.</p>
-                </div>
-                <div class="beneficio-item">
-                    <span>⏰</span>
-                    <h4>Horário Flexível</h4>
-                    <p>Turnos que respeitam seu equilíbrio entre vida pessoal e profissional.</p>
-                </div>
-                <div class="beneficio-item">
-                    <span>🏆</span>
-                    <h4>Reconhecimento</h4>
-                    <p>Valorizamos e reconhecemos o trabalho de cada profissional do time.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- VAGAS -->
-        <section class="sec-black fade-in">
-            <p class="section-title">Vagas em Aberto</p>
-            <p class="section-subtitle">Oportunidades para você</p>
-            <div class="vagas-grid">
-                <div class="vaga">
-                    <div class="vaga__header">
-                        <span class="vaga__icon">✂️</span>
-                        <h3 class="vaga__title">Cabeleireiro(a)</h3>
-                    </div>
-                    <p class="vaga__desc">Profissional experiente em cortes masculinos e femininos, coloração e tratamentos. Desejável conhecimento em degradê e técnicas modernas.</p>
-                    <span class="vaga__badge">Vaga Aberta</span>
-                </div>
-                <div class="vaga">
-                    <div class="vaga__header">
-                        <span class="vaga__icon">🪒</span>
-                        <h3 class="vaga__title">Barbeiro</h3>
-                    </div>
-                    <p class="vaga__desc">Profissional especializado em barba e cortes masculinos. Experiência com navalha, toalha quente e acabamento de qualidade.</p>
-                    <span class="vaga__badge">Vaga Aberta</span>
-                </div>
-                <div class="vaga">
-                    <div class="vaga__header">
-                        <span class="vaga__icon">🧪</span>
-                        <h3 class="vaga__title">Especialista em Química</h3>
-                    </div>
-                    <p class="vaga__desc">Profissional com experiência em coloração, luzes, progressiva e alisamento. Conhecimento em produtos profissionais de marcas premium.</p>
-                    <span class="vaga__badge">Vaga Aberta</span>
-                </div>
-            </div>
-        </section>
-
         <!-- FORMULÁRIO -->
         <section class="form-section fade-in">
             <div class="form-container">
@@ -141,7 +68,6 @@
                         <option>Cabeleireiro(a)</option>
                         <option>Barbeiro</option>
                         <option>Especialista em Química</option>
-                        <option>Outra — descreva nas observações</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -178,20 +104,40 @@
     <footer>
         <img src="../img/kleberlogo.png" class="logo_footer" alt="Kleber Pinto">
         <div class="footer-social">
-            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i></a>
-            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://wa.me/5511982950502" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://instagram.com/studio.kleber.pinto" target="_blank"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-facebook"></i></a>
         </div>
         <p>
-            <a href="https://wa.me/5511999000000" target="_blank"><i class="fa fa-whatsapp"></i> (11) 9990-0000</a>
+            <a href="https://wa.me/5511982950502" target="_blank"><i class="fa fa-whatsapp"></i> (11) 98295-0502</a>
             &nbsp;|&nbsp;
-            <a href="https://instagram.com/kleber.pinto.hair" target="_blank"><i class="fa fa-instagram"></i> @kleber.pinto.hair</a>
+            <a href="https://instagram.com/studio.kleber.pinto" target="_blank"><i class="fa fa-instagram"></i> @studio.kleber.pinto</a>
         </p>
         <p>R. Nepal, 615 — Parque Capuava, Santo André - SP</p>
         <p class="footer-copy">© 2025 Kleber Pinto Salão de Beleza e Barbearia.</p>
     </footer>
 
     <script>
+        const toggle = document.getElementById('menuToggle');
+        const nav    = document.getElementById('mainNav');
+        const overlay= document.getElementById('navOverlay');
+        function closeMenu() {
+            toggle.classList.remove('active');
+            nav.classList.remove('open');
+            overlay.classList.remove('active');
+            toggle.setAttribute('aria-expanded','false');
+            document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        overlay.addEventListener('click', closeMenu);
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
         function enviarCandidatura() {
             const nome  = document.getElementById('tc-nome').value.trim();
             const tel   = document.getElementById('tc-tel').value.trim();
@@ -205,17 +151,22 @@
                 return;
             }
             const texto = `Olá! Gostaria de me candidatar a uma vaga:\n\n👤 *Nome:* ${nome}\n📋 *Vaga:* ${vaga}\n⏳ *Experiência:* ${exp}\n📞 *Telefone:* ${tel}\n📧 *E-mail:* ${email}\n📝 *Sobre mim:* ${msg}${ig ? '\n🔗 *Portfólio:* ' + ig : ''}`;
-            window.open('https://wa.me/5511999000000?text=' + encodeURIComponent(texto), '_blank');
+            window.open('https://wa.me/5511982950502?text=' + encodeURIComponent(texto), '_blank');
             const alerta = document.getElementById('alertaCandidatura');
             alerta.style.display = 'block';
             window.scrollTo({ top: alerta.offsetTop - 80, behavior: 'smooth' });
         }
 
         const els = document.querySelectorAll('.fade-in');
-        const obs = new IntersectionObserver(entries => {
+        const obsIO = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1 });
-        els.forEach(el => obs.observe(el));
+        els.forEach(el => obsIO.observe(el));
     </script>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511982950502" target="_blank" class="btn-flutuante" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
 </body>
 </html>
