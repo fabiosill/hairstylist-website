@@ -53,40 +53,35 @@
             <p class="section-title">Nossos Serviços</p>
             <p class="section-subtitle">Tudo que você precisa em um só lugar</p>
             <div class="cards-grid">
-                <div class="card">
-                    <img src="/img/kleberquimica.jpg"/><br>
+                <div class="card" data-modal="corte" role="button" tabindex="0" aria-label="Ver detalhes: Corte de Cabelo">
+                    <img src="/img/klebercorte3.png"/><br>
                     <h3>Corte de Cabelo</h3>
                     <p>Cortes masculinos e femininos, do clássico ao moderno. Degradê, tesoura, navalha.</p>
                 </div>
-                <div class="card">
-                    <img src="/img/kleberquimica.jpg"/><br>
+                <div class="card" data-modal="barba" role="button" tabindex="0" aria-label="Ver detalhes: Barba">
+                    <img src="/img/kleberbarba.png"/><br>
                     <h3>Barba</h3>
-                    <p>Barba desenhada, aparada ou feita com navalha e toalha quente para um acabamento impecável.</p>
-                 
+                    <p>Barba desenhada, aparada ou feita com navalha e toalha quente.</p>
                 </div>
-                <div class="card">
-                    <img src="/img/kleberquimica.jpg"/><br>
+                <div class="card" data-modal="quimica" role="button" tabindex="0" aria-label="Ver detalhes: Química">
+                    <img src="/img/kleberquimicas.png"/><br>
                     <h3>Química</h3>
-                    <p>Coloração, luzes, mechas, alisamento, progressiva e tratamentos de reconstrução capilar.</p>
-                    
+                    <p>Coloração, luzes, mechas, alisamento, progressiva e reconstrução capilar.</p>
                 </div>
-                <div class="card">
-                    <img src="/img/kleberquimica.jpg"/><br>
+                <div class="card" data-modal="hidratacao" role="button" tabindex="0" aria-label="Ver detalhes: Hidratação">
+                    <img src="/img/kleberhidratacao.jpg"/><br>
                     <h3>Hidratação</h3>
                     <p>Tratamento completo com máscaras profissionais, nutrição e brilho intenso para os fios.</p>
-          
                 </div>
-                <div class="card">
-                    <img src="/img/kleberquimica.jpg"/><br>
-                    <h3>Pacote VIP</h3>
-                    <p>Corte + Barba + Hidratação + Sobrancelha. Experiência completa com atendimento exclusivo.</p>
-               
-                </div>
-                <div class="card">
-                    <img src="/img/kleberquimica.jpg"/><br>
+                <div class="card" data-modal="sobrancelha" role="button" tabindex="0" aria-label="Ver detalhes: Sobrancelha">
+                    <img src="/img/klebersobrancelha.png"/><br>
                     <h3>Sobrancelha</h3>
                     <p>Design, henna e correção de sobrancelhas com técnica profissional e resultado natural.</p>
-                
+                </div>
+                <div class="card" data-modal="vip" role="button" tabindex="0" aria-label="Ver detalhes: Pacote Vip">
+                    <img src="/img/kleberpacotevip.png"/><br>
+                    <h3>Pacote Vip</h3>
+                    <p>Retoque de raiz + Abertura de mechas + Progressiva + Tonalização de mechas + Hidratação + Corte + Escova</p>
                 </div>
             </div>
         </section>
@@ -150,38 +145,194 @@
     </footer>
 
     <script>
-        // Mobile menu
-        const toggle = document.getElementById('menuToggle');
-        const nav    = document.getElementById('mainNav');
-        const overlay= document.getElementById('navOverlay');
+        // ── Mobile menu ──
+        const toggle      = document.getElementById('menuToggle');
+        const nav         = document.getElementById('mainNav');
+        const navOverlay  = document.getElementById('navOverlay');
         function closeMenu() {
             toggle.classList.remove('active');
             nav.classList.remove('open');
-            overlay.classList.remove('active');
+            navOverlay.classList.remove('active');
             toggle.setAttribute('aria-expanded','false');
             document.body.style.overflow = '';
         }
         toggle.addEventListener('click', () => {
             const open = nav.classList.toggle('open');
             toggle.classList.toggle('active');
-            overlay.classList.toggle('active');
+            navOverlay.classList.toggle('active');
             toggle.setAttribute('aria-expanded', open);
             document.body.style.overflow = open ? 'hidden' : '';
         });
-        overlay.addEventListener('click', closeMenu);
+        navOverlay.addEventListener('click', closeMenu);
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-        // Scroll reveal
+        // ── Scroll reveal ──
         const els = document.querySelectorAll('.fade-in');
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.12 });
         els.forEach(el => obs.observe(el));
+
+        // ── Modal de Serviços ──
+        const MODAL_DATA = {
+            corte: {
+                img:   '/img/klebercorte3.png',
+                icon:  '✂️',
+                title: 'Corte de Cabelo',
+                desc:  'Do clássico ao contemporâneo, nossos profissionais dominam todas as técnicas para realçar sua personalidade. Seja um degradê preciso, um corte a tesoura sofisticado ou uma navalha artesanal, cada detalhe é trabalhado com atenção total.',
+                list: [
+                    'Corte masculino clássico e moderno',
+                    'Corte feminino com tesoura e navalha',
+                    'Degradê (máquina, baixo, médio e alto)',
+                    'Acabamento com navalha e detalhes',
+                    'Lavagem, secagem e finalização inclusos',
+                    'Consulta de estilo personalizada'
+                ],
+                tags: ['Masculino', 'Feminino', 'Degradê', 'Tesoura', 'Navalha', 'Finalização']
+            },
+            barba: {
+                img:   '/img/kleberbarba.png',
+                icon:  '🪒',
+                title: 'Barba',
+                desc:  'A barba perfeita é um cartão de visitas. Com técnica apurada e produtos premium, esculpimos contornos precisos que combinam com seu rosto e estilo, deixando a pele macia e a barba impecável.',
+                list: [
+                    'Barba desenhada com navalha artesanal',
+                    'Aparada com máquina e acabamento perfeito',
+                    'Toalha quente para abertura dos poros',
+                    'Hidratação pós-barba com produtos premium',
+                    'Definição de contorno personalizado',
+                    'Óleo de barba e finalização profissional'
+                ],
+                tags: ['Navalha', 'Toalha quente', 'Desenho', 'Hidratação', 'Contorno']
+            },
+            quimica: {
+                img:   '/img/kleberquimicas.png',
+                icon:  '✨',
+                title: 'Química Capilar',
+                desc:  'Transforme seu cabelo com segurança e resultados duradouros. Nossa equipe é especializada em procedimentos químicos utilizando produtos de marcas internacionais, preservando a saúde e a beleza dos seus fios.',
+                list: [
+                    'Coloração completa e retoque de raiz',
+                    'Mechas, luzes e balayage',
+                    'Alisamento e progressiva com formol zero',
+                    'Tonalização e gloss de cor',
+                    'Reconstrução capilar intensiva',
+                    'Avaliação e diagnóstico capilar gratuitos'
+                ],
+                tags: ['Coloração', 'Mechas', 'Progressiva', 'Alisamento', 'Tonalização', 'Premium']
+            },
+            hidratacao: {
+                img:   '/img/kleberhidratacao.jpg',
+                icon:  '💧',
+                title: 'Hidratação',
+                desc:  'Devolva vida, brilho e maciez aos seus cabelos com nosso protocolo completo de hidratação. Utilizamos máscaras profissionais de alta performance adaptadas ao seu tipo de fio, com foco em nutrição profunda e selamento das cutículas.',
+                list: [
+                    'Diagnóstico do nível de porosidade capilar',
+                    'Máscara de hidratação profissional',
+                    'Nutrição com óleos e manteigas capilares',
+                    'Reconstrução das pontas danificadas',
+                    'Selamento de cutículas com calor controlado',
+                    'Brilho intenso e duradouro garantido'
+                ],
+                tags: ['Hidratação', 'Nutrição', 'Reconstrução', 'Brilho', 'Maciez', 'Cutícula']
+            },
+            sobrancelha: {
+                img:   '/img/klebersobrancelha.png',
+                icon:  '🪷',
+                title: 'Sobrancelha',
+                desc:  'A sobrancelha certa enquadra o olhar e transforma a expressão do rosto. Com técnica profissional e olho clínico, realizamos o design perfeito para o seu formato de rosto, com resultados naturais e duradouros.',
+                list: [
+                    'Design personalizado por formato de rosto',
+                    'Henna para preenchimento e definição',
+                    'Correção de assimetrias e falhas',
+                    'Acabamento com pinça, linha ou cera',
+                    'Aplicação de produtos fixadores',
+                    'Orientação de cuidados em casa'
+                ],
+                tags: ['Design', 'Henna', 'Modelagem', 'Natural', 'Assimetria', 'Durável']
+            },
+            vip: {
+                img:   '/img/kleberpacotevip.png',
+                icon:  '👑',
+                title: 'Pacote Vip',
+                desc:  'A experiência mais completa do estúdio. O Pacote VIP reúne nossos melhores serviços em uma única sessão, pensada para quem quer sair totalmente renovado com o máximo de cuidado e exclusividade.',
+                list: [
+                    'Retoque de raiz completo',
+                    'Abertura de mechas ou luzes',
+                    'Progressiva de alta performance',
+                    'Tonalização de mechas personalizada',
+                    'Hidratação intensiva profissional',
+                    'Corte e escova finalização premium'
+                ],
+                tags: ['Tudo incluído', 'Exclusivo', 'Premium', 'Transformação', 'Completo', 'VIP']
+            }
+        };
+
+        const modalEl   = document.getElementById('serviceModal');
+        const closeBtn  = document.getElementById('modalClose');
+
+        function openModal(key) {
+            const d = MODAL_DATA[key];
+            if (!d) return;
+            document.getElementById('modalImg').src              = d.img;
+            document.getElementById('modalImg').alt              = d.title;
+            document.getElementById('modalIcon').textContent     = d.icon;
+            document.getElementById('modalTitle').textContent    = d.title;
+            document.getElementById('modalDesc').textContent     = d.desc;
+            document.getElementById('modalList').innerHTML       = d.list.map(i => `<li>${i}</li>`).join('');
+            document.getElementById('modalTags').innerHTML       = d.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
+            modalEl.style.display = 'flex';
+            modalEl.classList.remove('closing');
+            document.body.style.overflow = 'hidden';
+            closeBtn.focus();
+        }
+
+        function closeModal() {
+            modalEl.classList.add('closing');
+            modalEl.addEventListener('animationend', () => {
+                modalEl.style.display = 'none';
+                modalEl.classList.remove('closing');
+                document.body.style.overflow = '';
+            }, { once: true });
+        }
+
+        document.querySelectorAll('.card[data-modal]').forEach(card => {
+            card.addEventListener('click', () => openModal(card.dataset.modal));
+            card.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.modal); }
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        modalEl.addEventListener('click', e => { if (e.target === modalEl) closeModal(); });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && modalEl.style.display !== 'none') closeModal();
+        });
     </script>
 
     <!-- Botão flutuante WhatsApp -->
     <a href="https://wa.me/5511982950502" target="_blank" class="btn-flutuante" aria-label="Fale conosco pelo WhatsApp">
         <i class="fa fa-whatsapp"></i>
     </a>
+
+    <!-- MODAL DE SERVIÇOS -->
+    <div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none;">
+        <div class="modal-box" id="modalBox">
+            <button class="modal-close" id="modalClose" aria-label="Fechar">&#x2715;</button>
+            <img src="" alt="" class="modal-img" id="modalImg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-icon" id="modalIcon"></span>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                </div>
+                <div class="modal-sep"></div>
+                <p class="modal-desc" id="modalDesc"></p>
+                <p class="modal-section-label">O que está incluído</p>
+                <ul class="modal-list" id="modalList"></ul>
+                <p class="modal-section-label">Diferenciais</p>
+                <div class="modal-tags" id="modalTags"></div>
+                <a href="pages/agendamento.html" class="modal-cta">Agendar este serviço</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
