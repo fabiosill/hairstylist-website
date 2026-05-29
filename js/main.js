@@ -87,7 +87,7 @@
 const MODAL_DATA = {
 
     corte: {
-        img: '/img/klebercorte3.png',
+        img: '../img/klebercorte3.png',
         title: 'Corte de Cabelo',
         desc: 'Do clássico ao moderno, nossos cortes são realizados com técnicas profissionais para valorizar seu estilo, formato de rosto e personalidade. Trabalhamos com degradê, tesoura, navalha e acabamentos detalhados, proporcionando um visual sofisticado, moderno e alinhado em cada atendimento.',
         tags: [
@@ -100,7 +100,7 @@ const MODAL_DATA = {
     },
 
     barba: {
-        img: '/img/kleberbarba.png',
+        img: '../img/kleberbarba.png',
         title: 'Barba',
         desc: 'Modelagem e acabamento profissional para uma barba alinhada, elegante e bem definida. Utilizamos técnicas precisas de contorno, toalha quente, navalha e hidratação para proporcionar uma experiência premium com conforto, estilo e máxima atenção aos detalhes.',
         tags: [
@@ -112,7 +112,7 @@ const MODAL_DATA = {
     },
 
     quimica: {
-        img: '/img/kleberquimicas.png',
+        img: '../img/kleberquimicas.png',
         title: 'Química Capilar',
         desc: 'Procedimentos químicos realizados com segurança, tecnologia e produtos premium de alta qualidade. Trabalhamos com coloração, mechas, progressiva, tonalização e transformação capilar, sempre preservando a saúde dos fios e garantindo resultados modernos e duradouros.',
         tags: [
@@ -124,7 +124,7 @@ const MODAL_DATA = {
     },
 
     hidratacao: {
-        img: '/img/kleberhidratacao.jpg',
+        img: '../img/kleberhidratacao.jpg',
         title: 'Hidratação',
         desc: 'Tratamento intensivo desenvolvido para recuperar brilho, maciez e saúde dos fios. Utilizamos produtos profissionais que nutrem profundamente o cabelo, combatem o ressecamento e restauram a vitalidade, deixando os fios mais leves, sedosos e com aparência saudável.',
         tags: [
@@ -136,7 +136,7 @@ const MODAL_DATA = {
     },
 
     sobrancelha: {
-        img: '/img/klebersobrancelha.png',
+        img: '../img/klebersobrancelha.png',
         title: 'Sobrancelha',
         desc: 'Design profissional de sobrancelhas realizado de forma personalizada para harmonizar o rosto e valorizar o olhar. Trabalhamos com técnicas modernas de modelagem e acabamento natural, garantindo definição, equilíbrio e um resultado elegante e sofisticado.',
         tags: [
@@ -148,7 +148,7 @@ const MODAL_DATA = {
     },
 
     vip: {
-        img: '/img/kleberpacotevip.png',
+        img: '../img/kleberpacotevip.png',
         title: 'Pacote VIP',
         desc: 'Uma experiência completa e exclusiva reunindo os principais serviços do estúdio em um único atendimento premium. O pacote combina cuidados capilares, transformação visual, hidratação e finalização profissional para proporcionar um resultado impecável, sofisticado e de alto padrão.',
         tags: [
