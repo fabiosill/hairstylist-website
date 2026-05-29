@@ -596,9 +596,11 @@ nav ul li.active a::after { display: none; }
     cursor: pointer;
 }
 .card img{
-    width: 250px;
+    width: 100%;
+    max-width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: var(--radius-sm);
 }
 
 /* linha dourada top ao hover */
@@ -1446,10 +1448,10 @@ footer a:hover { color: #fff; }
 
     /* ── SOBRE NÓS / POR QUE ESCOLHER ── */
     .imgsobrenos { float: none; display: block; margin: 0 auto 24px; width: 160px; }
-    .produtos-section { flex-direction: column; text-align: center; align-items: center; }
+    .produtos-section { flex-direction: column; align-items: flex-start; }
     .produtos-text { max-width: 100%; }
-    .produtos-list li { justify-content: center; }
-    .imglogo { width: 200px; }
+    .produtos-list li { justify-content: flex-start; }
+    .imglogo { width: 200px; align-self: center; }
 
     /* ── CONTATO / SOCIAL ── */
     .contact-info-grid { gap: 32px; flex-direction: column; align-items: center; }
