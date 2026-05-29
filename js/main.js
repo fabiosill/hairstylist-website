@@ -100,7 +100,7 @@ const MODAL_DATA = {
     },
 
     barba: {
-        img: '../img/kleberbarba.png',
+        img: './img/kleberbarba.png',
         title: 'Barba',
         desc: 'Modelagem e acabamento profissional para uma barba alinhada, elegante e bem definida. Utilizamos técnicas precisas de contorno, toalha quente, navalha e hidratação para proporcionar uma experiência premium com conforto, estilo e máxima atenção aos detalhes.',
         tags: [
@@ -112,7 +112,7 @@ const MODAL_DATA = {
     },
 
     quimica: {
-        img: '../img/kleberquimicas.png',
+        img: '/img/kleberquimicas.png',
         title: 'Química Capilar',
         desc: 'Procedimentos químicos realizados com segurança, tecnologia e produtos premium de alta qualidade. Trabalhamos com coloração, mechas, progressiva, tonalização e transformação capilar, sempre preservando a saúde dos fios e garantindo resultados modernos e duradouros.',
         tags: [
@@ -124,7 +124,7 @@ const MODAL_DATA = {
     },
 
     hidratacao: {
-        img: '../img/kleberhidratacao.jpg',
+        img: 'img/kleberhidratacao.jpg',
         title: 'Hidratação',
         desc: 'Tratamento intensivo desenvolvido para recuperar brilho, maciez e saúde dos fios. Utilizamos produtos profissionais que nutrem profundamente o cabelo, combatem o ressecamento e restauram a vitalidade, deixando os fios mais leves, sedosos e com aparência saudável.',
         tags: [
